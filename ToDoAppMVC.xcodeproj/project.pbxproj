@@ -9,21 +9,52 @@
 /* Begin PBXBuildFile section */
 		726C5BC52424CF7800B66ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C5BC42424CF7800B66ACE /* AppDelegate.swift */; };
 		726C5BC72424CF7800B66ACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C5BC62424CF7800B66ACE /* SceneDelegate.swift */; };
-		726C5BC92424CF7800B66ACE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C5BC82424CF7800B66ACE /* ViewController.swift */; };
+		726C5BC92424CF7800B66ACE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C5BC82424CF7800B66ACE /* TableViewController.swift */; };
 		726C5BCC2424CF7800B66ACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 726C5BCA2424CF7800B66ACE /* Main.storyboard */; };
 		726C5BCE2424CF7900B66ACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726C5BCD2424CF7800B66ACE /* Assets.xcassets */; };
 		726C5BD12424CF7900B66ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 726C5BCF2424CF7900B66ACE /* LaunchScreen.storyboard */; };
+		726C5BDC2424D00500B66ACE /* ToDoTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C5BDB2424D00500B66ACE /* ToDoTaskTableViewCell.swift */; };
+		726C5BDE2424D01000B66ACE /* AddToDoTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C5BDD2424D01000B66ACE /* AddToDoTaskTableViewCell.swift */; };
+		726C5BE22424D1BB00B66ACE /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726C5BE02424D1BB00B66ACE /* RealmSwift.framework */; };
+		726C5BE32424D1BB00B66ACE /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 726C5BE02424D1BB00B66ACE /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		726C5BE42424D1BB00B66ACE /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726C5BE12424D1BB00B66ACE /* Realm.framework */; };
+		726C5BE52424D1BB00B66ACE /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 726C5BE12424D1BB00B66ACE /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		726C5BE92424D2C500B66ACE /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C5BE82424D2C500B66ACE /* Persistance.swift */; };
+		726C5BEB2424D2DF00B66ACE /* ToDoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C5BEA2424D2DF00B66ACE /* ToDoTask.swift */; };
+		726C5BED2424D3BC00B66ACE /* ToDoCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C5BEC2424D3BC00B66ACE /* ToDoCheckBox.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		726C5BE62424D1BB00B66ACE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				726C5BE52424D1BB00B66ACE /* Realm.framework in Embed Frameworks */,
+				726C5BE32424D1BB00B66ACE /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		726C5BC12424CF7800B66ACE /* ToDoAppMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoAppMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		726C5BC42424CF7800B66ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		726C5BC62424CF7800B66ACE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		726C5BC82424CF7800B66ACE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		726C5BC82424CF7800B66ACE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		726C5BCB2424CF7800B66ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		726C5BCD2424CF7800B66ACE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		726C5BD02424CF7900B66ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		726C5BD22424CF7900B66ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		726C5BDB2424D00500B66ACE /* ToDoTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTaskTableViewCell.swift; sourceTree = "<group>"; };
+		726C5BDD2424D01000B66ACE /* AddToDoTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoTaskTableViewCell.swift; sourceTree = "<group>"; };
+		726C5BE02424D1BB00B66ACE /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		726C5BE12424D1BB00B66ACE /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		726C5BE82424D2C500B66ACE /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		726C5BEA2424D2DF00B66ACE /* ToDoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTask.swift; sourceTree = "<group>"; };
+		726C5BEC2424D3BC00B66ACE /* ToDoCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCheckBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				726C5BE42424D1BB00B66ACE /* Realm.framework in Frameworks */,
+				726C5BE22424D1BB00B66ACE /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +75,7 @@
 			children = (
 				726C5BC32424CF7800B66ACE /* ToDoAppMVC */,
 				726C5BC22424CF7800B66ACE /* Products */,
+				726C5BDF2424D1BA00B66ACE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +90,53 @@
 		726C5BC32424CF7800B66ACE /* ToDoAppMVC */ = {
 			isa = PBXGroup;
 			children = (
+				726C5BDA2424CF8F00B66ACE /* Controllers */,
+				726C5BD82424CF7D00B66ACE /* Models */,
+				726C5BD92424CF8100B66ACE /* Views */,
 				726C5BC42424CF7800B66ACE /* AppDelegate.swift */,
 				726C5BC62424CF7800B66ACE /* SceneDelegate.swift */,
-				726C5BC82424CF7800B66ACE /* ViewController.swift */,
-				726C5BCA2424CF7800B66ACE /* Main.storyboard */,
 				726C5BCD2424CF7800B66ACE /* Assets.xcassets */,
 				726C5BCF2424CF7900B66ACE /* LaunchScreen.storyboard */,
 				726C5BD22424CF7900B66ACE /* Info.plist */,
+				726C5BE82424D2C500B66ACE /* Persistance.swift */,
 			);
 			path = ToDoAppMVC;
+			sourceTree = "<group>";
+		};
+		726C5BD82424CF7D00B66ACE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				726C5BEA2424D2DF00B66ACE /* ToDoTask.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		726C5BD92424CF8100B66ACE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				726C5BCA2424CF7800B66ACE /* Main.storyboard */,
+				726C5BDB2424D00500B66ACE /* ToDoTaskTableViewCell.swift */,
+				726C5BDD2424D01000B66ACE /* AddToDoTaskTableViewCell.swift */,
+				726C5BEC2424D3BC00B66ACE /* ToDoCheckBox.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		726C5BDA2424CF8F00B66ACE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				726C5BC82424CF7800B66ACE /* TableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		726C5BDF2424D1BA00B66ACE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				726C5BE12424D1BB00B66ACE /* Realm.framework */,
+				726C5BE02424D1BB00B66ACE /* RealmSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +149,8 @@
 				726C5BBD2424CF7800B66ACE /* Sources */,
 				726C5BBE2424CF7800B66ACE /* Frameworks */,
 				726C5BBF2424CF7800B66ACE /* Resources */,
+				726C5BE62424D1BB00B66ACE /* Embed Frameworks */,
+				726C5BE72424D1C500B66ACE /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -133,14 +207,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		726C5BE72424D1C500B66ACE /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		726C5BBD2424CF7800B66ACE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				726C5BC92424CF7800B66ACE /* ViewController.swift in Sources */,
+				726C5BDE2424D01000B66ACE /* AddToDoTaskTableViewCell.swift in Sources */,
+				726C5BEB2424D2DF00B66ACE /* ToDoTask.swift in Sources */,
+				726C5BED2424D3BC00B66ACE /* ToDoCheckBox.swift in Sources */,
+				726C5BC92424CF7800B66ACE /* TableViewController.swift in Sources */,
 				726C5BC52424CF7800B66ACE /* AppDelegate.swift in Sources */,
+				726C5BDC2424D00500B66ACE /* ToDoTaskTableViewCell.swift in Sources */,
 				726C5BC72424CF7800B66ACE /* SceneDelegate.swift in Sources */,
+				726C5BE92424D2C500B66ACE /* Persistance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +387,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ToDoAppMVC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +408,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ToDoAppMVC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

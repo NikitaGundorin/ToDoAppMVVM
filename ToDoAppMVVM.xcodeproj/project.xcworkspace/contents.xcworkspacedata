@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ToDoAppMVC.xcodeproj">
+      location = "self:/Users/djnig/Library/Autosave Information/ToDoAppMVVM/ToDoAppMVVM.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,6 +1,6 @@
 //
 //  AddToDoTaskTableViewCell.swift
-//  ToDoAppMVC
+//  ToDoAppMVVM
 //
 //  Created by Никита Гундорин on 20.03.2020.
 //  Copyright © 2020 Никита Гундорин. All rights reserved.

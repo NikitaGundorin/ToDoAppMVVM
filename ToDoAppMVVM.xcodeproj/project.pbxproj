@@ -22,6 +22,8 @@
 		726C5BE92424D2C500B66ACE /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C5BE82424D2C500B66ACE /* Persistance.swift */; };
 		726C5BEB2424D2DF00B66ACE /* ToDoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C5BEA2424D2DF00B66ACE /* ToDoTask.swift */; };
 		726C5BED2424D3BC00B66ACE /* ToDoCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C5BEC2424D3BC00B66ACE /* ToDoCheckBox.swift */; };
+		726C5BF02424DDF600B66ACE /* ToDoTaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C5BEF2424DDF600B66ACE /* ToDoTaskListViewModel.swift */; };
+		726C5BF22424E12700B66ACE /* ToDoTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C5BF12424E12700B66ACE /* ToDoTaskViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,7 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		726C5BC12424CF7800B66ACE /* ToDoAppMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoAppMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		726C5BC12424CF7800B66ACE /* ToDoAppMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoAppMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		726C5BC42424CF7800B66ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		726C5BC62424CF7800B66ACE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		726C5BC82424CF7800B66ACE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,8 @@
 		726C5BE82424D2C500B66ACE /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 		726C5BEA2424D2DF00B66ACE /* ToDoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTask.swift; sourceTree = "<group>"; };
 		726C5BEC2424D3BC00B66ACE /* ToDoCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCheckBox.swift; sourceTree = "<group>"; };
+		726C5BEF2424DDF600B66ACE /* ToDoTaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTaskListViewModel.swift; sourceTree = "<group>"; };
+		726C5BF12424E12700B66ACE /* ToDoTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTaskViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +77,7 @@
 		726C5BB82424CF7800B66ACE = {
 			isa = PBXGroup;
 			children = (
-				726C5BC32424CF7800B66ACE /* ToDoAppMVC */,
+				726C5BC32424CF7800B66ACE /* ToDoAppMVVM */,
 				726C5BC22424CF7800B66ACE /* Products */,
 				726C5BDF2424D1BA00B66ACE /* Frameworks */,
 			);
@@ -82,15 +86,15 @@
 		726C5BC22424CF7800B66ACE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				726C5BC12424CF7800B66ACE /* ToDoAppMVC.app */,
+				726C5BC12424CF7800B66ACE /* ToDoAppMVVM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		726C5BC32424CF7800B66ACE /* ToDoAppMVC */ = {
+		726C5BC32424CF7800B66ACE /* ToDoAppMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				726C5BDA2424CF8F00B66ACE /* Controllers */,
+				726C5BEE2424DDCC00B66ACE /* ViewModels */,
 				726C5BD82424CF7D00B66ACE /* Models */,
 				726C5BD92424CF8100B66ACE /* Views */,
 				726C5BC42424CF7800B66ACE /* AppDelegate.swift */,
@@ -100,7 +104,7 @@
 				726C5BD22424CF7900B66ACE /* Info.plist */,
 				726C5BE82424D2C500B66ACE /* Persistance.swift */,
 			);
-			path = ToDoAppMVC;
+			path = ToDoAppMVVM;
 			sourceTree = "<group>";
 		};
 		726C5BD82424CF7D00B66ACE /* Models */ = {
@@ -114,20 +118,13 @@
 		726C5BD92424CF8100B66ACE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				726C5BC82424CF7800B66ACE /* TableViewController.swift */,
 				726C5BCA2424CF7800B66ACE /* Main.storyboard */,
 				726C5BDB2424D00500B66ACE /* ToDoTaskTableViewCell.swift */,
 				726C5BDD2424D01000B66ACE /* AddToDoTaskTableViewCell.swift */,
 				726C5BEC2424D3BC00B66ACE /* ToDoCheckBox.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		726C5BDA2424CF8F00B66ACE /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				726C5BC82424CF7800B66ACE /* TableViewController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		726C5BDF2424D1BA00B66ACE /* Frameworks */ = {
@@ -139,12 +136,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		726C5BEE2424DDCC00B66ACE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				726C5BEF2424DDF600B66ACE /* ToDoTaskListViewModel.swift */,
+				726C5BF12424E12700B66ACE /* ToDoTaskViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		726C5BC02424CF7800B66ACE /* ToDoAppMVC */ = {
+		726C5BC02424CF7800B66ACE /* ToDoAppMVVM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 726C5BD52424CF7900B66ACE /* Build configuration list for PBXNativeTarget "ToDoAppMVC" */;
+			buildConfigurationList = 726C5BD52424CF7900B66ACE /* Build configuration list for PBXNativeTarget "ToDoAppMVVM" */;
 			buildPhases = (
 				726C5BBD2424CF7800B66ACE /* Sources */,
 				726C5BBE2424CF7800B66ACE /* Frameworks */,
@@ -156,9 +162,9 @@
 			);
 			dependencies = (
 			);
-			name = ToDoAppMVC;
+			name = ToDoAppMVVM;
 			productName = ToDoAppMVC;
-			productReference = 726C5BC12424CF7800B66ACE /* ToDoAppMVC.app */;
+			productReference = 726C5BC12424CF7800B66ACE /* ToDoAppMVVM.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +182,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 726C5BBC2424CF7800B66ACE /* Build configuration list for PBXProject "ToDoAppMVC" */;
+			buildConfigurationList = 726C5BBC2424CF7800B66ACE /* Build configuration list for PBXProject "ToDoAppMVVM" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -189,7 +195,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				726C5BC02424CF7800B66ACE /* ToDoAppMVC */,
+				726C5BC02424CF7800B66ACE /* ToDoAppMVVM */,
 			);
 		};
 /* End PBXProject section */
@@ -236,9 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				726C5BDE2424D01000B66ACE /* AddToDoTaskTableViewCell.swift in Sources */,
+				726C5BF22424E12700B66ACE /* ToDoTaskViewModel.swift in Sources */,
 				726C5BEB2424D2DF00B66ACE /* ToDoTask.swift in Sources */,
 				726C5BED2424D3BC00B66ACE /* ToDoCheckBox.swift in Sources */,
 				726C5BC92424CF7800B66ACE /* TableViewController.swift in Sources */,
+				726C5BF02424DDF600B66ACE /* ToDoTaskListViewModel.swift in Sources */,
 				726C5BC52424CF7800B66ACE /* AppDelegate.swift in Sources */,
 				726C5BDC2424D00500B66ACE /* ToDoTaskTableViewCell.swift in Sources */,
 				726C5BC72424CF7800B66ACE /* SceneDelegate.swift in Sources */,
@@ -391,13 +399,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = ToDoAppMVC/Info.plist;
+				INFOPLIST_FILE = ToDoAppMVVM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nikitagundorin.ToDoAppMVC;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = nikitagundorin.ToDoAppMVVM;
+				PRODUCT_NAME = ToDoAppMVVM;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -412,13 +420,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = ToDoAppMVC/Info.plist;
+				INFOPLIST_FILE = ToDoAppMVVM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nikitagundorin.ToDoAppMVC;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = nikitagundorin.ToDoAppMVVM;
+				PRODUCT_NAME = ToDoAppMVVM;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -427,7 +435,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		726C5BBC2424CF7800B66ACE /* Build configuration list for PBXProject "ToDoAppMVC" */ = {
+		726C5BBC2424CF7800B66ACE /* Build configuration list for PBXProject "ToDoAppMVVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				726C5BD32424CF7900B66ACE /* Debug */,
@@ -436,7 +444,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		726C5BD52424CF7900B66ACE /* Build configuration list for PBXNativeTarget "ToDoAppMVC" */ = {
+		726C5BD52424CF7900B66ACE /* Build configuration list for PBXNativeTarget "ToDoAppMVVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				726C5BD62424CF7900B66ACE /* Debug */,

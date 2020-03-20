@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  ToDoAppMVC
+//  ToDoAppMVVM
 //
 //  Created by Никита Гундорин on 20.03.2020.
 //  Copyright © 2020 Никита Гундорин. All rights reserved.
@@ -10,25 +10,19 @@ import UIKit
 import RealmSwift
 
 class TableViewController: UITableViewController, AddTaskDelegate, ToDoTaskDelegate {
-    var items: Results<ToDoTask>!
+    var viewModel: ToDoTaskListViewModel = ToDoTaskListViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        items = Persistance.shared.getTasks()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if items.count != 0 {
-            return items.count + 1
-        }
-        return 1
+        return self.viewModel.numberOfRows
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (indexPath.row == items.count) {
+        if (indexPath.row == viewModel.count) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "addTaskCell", for: indexPath) as! AddToDoTaskTableViewCell
-            
             cell.delegate = self
             
             return cell
@@ -36,16 +30,13 @@ class TableViewController: UITableViewController, AddTaskDelegate, ToDoTaskDeleg
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ToDoTaskTableViewCell
         cell.delegate = self
-        let item = items[indexPath.row]
-        
-        cell.label.text = item.title
-        cell.checkbox.isChecked = item.isCompleted
+        cell.viewModel = self.viewModel.cellViewModel(forIndexPath: indexPath)
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        if (indexPath.row == items.count){
+        if (indexPath.row == viewModel.count){
             return UITableViewCell.EditingStyle.none
         } else {
             return UITableViewCell.EditingStyle.delete
@@ -54,20 +45,18 @@ class TableViewController: UITableViewController, AddTaskDelegate, ToDoTaskDeleg
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            Persistance.shared.removeTask(toDoTask: items[indexPath.row])
+            self.viewModel.removeTask(indexPath: indexPath)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
     func addToDoTask(toDoTaskTitle: String) {
-        Persistance.shared.createTask(title: toDoTaskTitle)
+        ToDoTaskListViewModel.createTask(title: toDoTaskTitle)
         tableView.reloadData()
     }
     
     func toggleTaskCompleted(cell: ToDoTaskTableViewCell) {
-        guard let index = self.tableView.indexPath(for: cell)?.row,
-            let item = self.items?[index] else { return }
-        Persistance.shared.toggleTaskCompleted(toDoTask: item)
+        self.viewModel.toggleTaskCompleted(forIndexPath: self.tableView.indexPath(for: cell))
         tableView.reloadData()
     }
 }
